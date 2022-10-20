@@ -1,0 +1,18 @@
+ .logo {
+    height: 32px;
+    margin: 16px;
+    background: #fff;
+  }
+  
+  .site-layout .site-layout-background {
+    background: #fff;
+  }
+
+  .text-red {
+    color: #FF0000;
+    margin-right: 10px;
+  }
+
+  .text-right {
+    text-align: right;
+  }
