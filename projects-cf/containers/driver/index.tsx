@@ -5,129 +5,140 @@ import {
   Col,
   Space,
   Card,
+  Avatar,
+  Button,
 } from 'antd';
 import {
   EllipsisOutlined,
+  UserOutlined,
+  LeftOutlined,
+  RightOutlined,
 } from '@ant-design/icons';
 import SideMenuComponent from '../../components/sideMenu';
 import HeaderComponent from '../../components/header';
 import HeaderContentComponent from '../../components/driver/headerContent';
+import moment from 'moment';
 
-const { Content } = Layout;
+const { Content, Footer } = Layout;
 
 const data = [
   {
     name: {
-      title: "Mrs",
-      first: "Ludmila",
-      last: "Weißbach"
-    },
-    dob: {
-      date: "1958-08-20T12:40:41.560Z",
-      age: 64
-    },
-    phone: "0155-3568697",
-    id: {
-      name: "SVNR",
-      value: "70 200858 W 981"
-    },
-    picture: {
-      large: "https://randomuser.me/api/portraits/women/29.jpg",
-      medium: "https://randomuser.me/api/portraits/med/women/29.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/women/29.jpg"
-    }
-  },
-  {
-    name: {
-      title: "Mr",
-      first: "Troy",
+      title: "Miss",
+      first: "Crystal",
       last: "Moore"
     },
+    email: "crystal.moore@example.com",
     dob: {
-      date: "1986-11-01T23:14:06.431Z",
-      age: 35
+      date: "1978-02-02T06:14:46.762Z",
+      age: 44
     },
-    phone: "(863) 855-1242",
+    phone: "(947) 587-2681",
     id: {
       name: "SSN",
-      value: "020-89-2216"
+      value: "111-76-5488"
     },
     picture: {
-      large: "https://randomuser.me/api/portraits/men/50.jpg",
-      medium: "https://randomuser.me/api/portraits/med/men/50.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/men/50.jpg"
+      large: "https://randomuser.me/api/portraits/women/46.jpg",
+      medium: "https://randomuser.me/api/portraits/med/women/46.jpg",
+      thumbnail: "https://randomuser.me/api/portraits/thumb/women/46.jpg"
     }
   },
   {
     name: {
       title: "Mr",
-      first: "Benito",
-      last: "Santos"
+      first: "Cameron",
+      last: "Carpenter"
     },
+    email: "cameron.carpenter@example.com",
     dob: {
-      date: "1960-06-11T01:01:28.285Z",
-      age: 62
+      date: "1974-02-19T12:26:46.289Z",
+      age: 48
     },
-    phone: "961-657-346",
+    phone: "031-985-0900",
     id: {
-      name: "DNI",
-      value: "69047467-F"
+      name: "PPS",
+      value: "1088930T"
     },
     picture: {
-      large: "https://randomuser.me/api/portraits/men/26.jpg",
-      medium: "https://randomuser.me/api/portraits/med/men/26.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/men/26.jpg"
+      large: "https://randomuser.me/api/portraits/men/75.jpg",
+      medium: "https://randomuser.me/api/portraits/med/men/75.jpg",
+      thumbnail: "https://randomuser.me/api/portraits/thumb/men/75.jpg"
     }
   },
   {
     name: {
-      title: "Ms",
-      first: "Navya",
-      last: "Anchan"
+      title: "Mr",
+      first: "Boško",
+      last: "Lazović"
     },
+    email: "bosko.lazovic@example.com",
     dob: {
-      date: "1970-04-10T20:55:57.539Z",
-      age: 52
+      date: "1982-09-05T01:33:22.467Z",
+      age: 40
     },
-    phone: "7341966736",
+    phone: "017-8184-254",
     id: {
-      name: "UIDAI",
-      value: "991458393506"
+      name: "SID",
+      value: "792972456"
     },
     picture: {
-      large: "https://randomuser.me/api/portraits/women/76.jpg",
-      medium: "https://randomuser.me/api/portraits/med/women/76.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/women/76.jpg"
+      large: "https://randomuser.me/api/portraits/men/93.jpg",
+      medium: "https://randomuser.me/api/portraits/med/men/93.jpg",
+      thumbnail: "https://randomuser.me/api/portraits/thumb/men/93.jpg"
     }
   },
   {
     name: {
-      title: "Mrs",
-      first: "Naja",
-      last: "Christiansen"
+      title: "Miss",
+      first: "یاسمین",
+      last: "گلشن"
     },
+    email: "ysmyn.glshn@example.com",
     dob: {
-      date: "1951-09-16T00:52:07.658Z",
-      age: 71
+      date: "1980-03-02T11:00:52.089Z",
+      age: 42
     },
-    phone: "94494432",
+    phone: "036-03291139",
     id: {
-      name: "CPR",
-      value: "150951-0907"
+      name: "",
+      value: null
     },
     picture: {
-      large: "https://randomuser.me/api/portraits/women/78.jpg",
-      medium: "https://randomuser.me/api/portraits/med/women/78.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/women/78.jpg"
+      large: "https://randomuser.me/api/portraits/women/6.jpg",
+      medium: "https://randomuser.me/api/portraits/med/women/6.jpg",
+      thumbnail: "https://randomuser.me/api/portraits/thumb/women/6.jpg"
+    }
+  },
+  {
+    name: {
+      title: "Miss",
+      first: "Emma",
+      last: "Salo"
+    },
+    email: "emma.salo@example.com",
+    dob: {
+      date: "1955-01-28T17:11:45.175Z",
+      age: 67
+    },
+    phone: "08-809-118",
+    id: {
+      name: "HETU",
+      value: "NaNNA878undefined"
+    },
+    picture: {
+      large: "https://randomuser.me/api/portraits/women/32.jpg",
+      medium: "https://randomuser.me/api/portraits/med/women/32.jpg",
+      thumbnail: "https://randomuser.me/api/portraits/thumb/women/32.jpg"
     }
   }
 ];
 
-const textTitle = (data: string) => {
+const textTitle = (data: string | any) => {
   return (
     <div className="title-content">
       <span className="text-grey">Driver ID </span>
-      <span className="text-color-red">{data}</span>
+      <span className="text-color-red">{data || "-"}</span>
     </div>
   )
 };
@@ -142,26 +153,53 @@ const DriverManagementContainer: React.FC = () => {
             <HeaderContentComponent />
             <Row justify="center" align="middle" className="margin20">
               <Col span={24}>
-                <Space direction="horizontal" size={32} style={{ display: 'flex' }}>
+                <Space align="start" direction="horizontal" size={28} style={{ display: 'flex' }}>
                   {data?.map((item) => (
                     <Card 
                       size="small"
-                      key={item?.id?.value}
+                      key={item?.email}
                       title={textTitle(item?.id?.value)}
                       style={{width: "200px"}}
                       extra={<a href="#"><EllipsisOutlined /></a>}
                       className="title-content"
                     >
-                      <>
+                      <Avatar size={64} icon={<UserOutlined />} src={item?.picture?.large} className="text-wrapper"/>
+                      <div className="text-wrapper">
                         <div className="text-grey">Nama Driver</div>
                         <div className="text-content">{item?.name?.first}, {item?.name?.last}</div>
-                      </>
+                      </div>
+                      <div className="text-wrapper">
+                        <div className="text-grey">Telepon</div>
+                        <div className="text-content">{item?.phone}</div>
+                      </div>
+                      <div className="text-wrapper">
+                        <div className="text-grey">Email</div>
+                        <div className="text-content">{item?.email}</div>
+                      </div>
+                      <div className="text-wrapper">
+                        <div className="text-grey">Tanggal Lahir</div>
+                        <div className="text-content">{moment(item?.dob?.date).format('DD-MM-YYYY')}</div>
+                      </div>
                     </Card>
                   ))}
                 </Space>
               </Col>
             </Row>
           </Content>
+          <Footer>
+            <Row justify="center" align="middle" className="margin20">
+              <Col span={12}  className="text-right">
+                <Button type="text" disabled style={{fontWeight: "bold"}}>
+                  <LeftOutlined /> Previous Page
+                </Button>
+              </Col>
+              <Col span={12}>
+                <Button type="text" style={{fontWeight: "bold"}}>
+                  Next Page <RightOutlined />
+                </Button>
+              </Col>
+            </Row>
+          </Footer>
         </Layout>
       </Layout>
   );
