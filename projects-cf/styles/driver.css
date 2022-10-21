@@ -37,14 +37,19 @@
   }
 
   .title-content {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .text-content {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
   }
 
   .text-grey {
     color: #808080;
+  }
+
+  .text-wrapper {
+    word-wrap: break-word;
+    margin-bottom: 15px;
   }

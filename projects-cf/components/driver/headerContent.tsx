@@ -8,6 +8,7 @@ import {
 } from 'antd';
 import {
   SearchOutlined,
+  PlusOutlined,
 } from '@ant-design/icons';
 
 const HeaderContentComponent: React.FC = () => {
@@ -20,7 +21,7 @@ const HeaderContentComponent: React.FC = () => {
         <Col span={12} className="padding20 text-right">
         <Space>
             <Input size="large" placeholder="Cari Driver" prefix={<SearchOutlined className="text-color-red" />}></Input>
-            <Button type="primary" size="large" danger>Tambah Driver +</Button>
+            <Button type="primary" size="large" danger>Tambah Driver <PlusOutlined /></Button>
         </Space>
         </Col>
     </Row>
