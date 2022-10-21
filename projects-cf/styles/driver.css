@@ -16,3 +16,35 @@
   .text-right {
     text-align: right;
   }
+
+  .margin20 {
+    margin: 20px;
+  }
+
+  .padding20 {
+    padding: 20px;
+  }
+
+  .title-page {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FF0000;
+    font-size: 28px;
+  }
+
+  .text-color-red {
+    color: #FF0000;
+  }
+
+  .title-content {
+    font-size: 11px;
+  }
+
+  .text-content {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .text-grey {
+    color: #808080;
+  }
