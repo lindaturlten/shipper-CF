@@ -10,8 +10,11 @@ import {
   SearchOutlined,
   PlusOutlined,
 } from '@ant-design/icons';
+import { IDriverInfo } from './driver.types';
 
-const HeaderContentComponent: React.FC = () => {
+const HeaderContentComponent: React.FC<IDriverInfo> = ({
+  onSearch,
+}) => {
   return (
     <Row justify="center" align="middle" className="margin20 site-layout-background">
         <Col span={12} className="padding20">
@@ -20,7 +23,7 @@ const HeaderContentComponent: React.FC = () => {
         </Col>
         <Col span={12} className="padding20 text-right">
         <Space>
-            <Input size="large" placeholder="Cari Driver" prefix={<SearchOutlined className="text-color-red" />}></Input>
+            <Input size="large" placeholder="Cari Driver" prefix={<SearchOutlined className="text-color-red" />} onChange={onSearch}></Input>
             <Button type="primary" size="large" danger>Tambah Driver <PlusOutlined /></Button>
         </Space>
         </Col>

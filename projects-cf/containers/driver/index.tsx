@@ -34,13 +34,18 @@ const DriverManagementContainer: React.FC = () => {
     getData();
   };
 
+  //sudah cari dokumentasinya untuk request search nya, tp belum ada yg sesuai datanya.
+  const handleOnSearch = (text: string) => {
+    console.log('query search nya belum ketemu dokumentasinya');
+  };
+
   return (
       <Layout>
         <SideMenuComponent />
         <Layout className="site-layout">
           <HeaderComponent />
           <Content>
-            <HeaderContentComponent />
+            <HeaderContentComponent onSearch={handleOnSearch}/>
             <DriverContentComponent 
               data={driverData}
               loading={isLoading}
